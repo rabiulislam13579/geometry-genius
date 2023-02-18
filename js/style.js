@@ -56,15 +56,6 @@ function makeDisplayBlock(elementId){
 
 
 
-//Pentagon
-const PentagonFirstInput=getInputValue('pentagon-p');
-const pentagonSecondInput=getInputValue('pentagon-b');
-
-//Ellipse
-const ellipseFirstInput=getInputValue('ellipse-a');
-const ellipseSecondInput=getInputValue('ellipse-b');
-
-
 //validation check and event handler
 
 //for triangle
@@ -135,6 +126,22 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
      fillResultField('pentagon-result',pentagonArea);
 
      makeDisplayBlock('pentagon-result-field');
+     
+    
+  
+})
+
+//Ellipse
+document.getElementById('btn-ellipse').addEventListener('click',function(){
+  const ellipseFirstInput=getInputValue('ellipse-a');
+  const ellipseSecondInput=getInputValue('ellipse-b');
+     const ellipseArea=3.1416 * ellipseFirstInput * ellipseSecondInput ;
+     const ellipseAreaString=ellipseArea.toFixed(2);
+     const ellipseAreaValue=parseFloat(ellipseAreaString);
+
+     fillResultField('ellipse-result',ellipseAreaValue);
+
+     makeDisplayBlock('ellipse-result-field');
      
     
   
