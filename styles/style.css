@@ -1,0 +1,17 @@
+.btn-convert{
+    color: white;
+    background-color: blue;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom:5px ;
+    border-radius: 8px;
+    margin-bottom: 5px}
+    
+    .hide{
+    display: none;
+}
+#triangle-result{
+    color: purple;
+    font-weight: bold;
+}

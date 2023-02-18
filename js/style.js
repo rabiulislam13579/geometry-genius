@@ -29,19 +29,33 @@ document.getElementById('btn-blog').addEventListener('click',function(){
 
 //function for take value from the input field
 
-function getInputValue(elementId){
-  const inputField=document.getElementById(elementId);
+function getInputValue(inputId){
+  const inputField=document.getElementById(inputId);
   const inputFieldString=inputField.value;
   const inputFieldValue=parseFloat(inputFieldString);
-  return inputFieldValue;
+  if(inputFieldValue < 0){
+    return alert('plz enter a positive number');
+
+  }
+  else{
+    return inputFieldValue
+   }
+}
+
+//get element by id
+function fillResultField(id,value){
+  const resultField= document.getElementById(id);
+  resultField.innerText=value;
+
+}
+
+//make display block the disable property
+function makeDisplayBlock(elementId){
+  document.getElementById(elementId).style.display='block';
 }
 
 
-//get the value of input field
 
-//triangle
-const triangleFirstInput=getInputValue('triangle-b');
-const triangleSecondInput=getInputValue('triangle-h');
 
 //rectangle
 const rectangleFirstInput=getInputValue('rectangle-w');
@@ -62,4 +76,22 @@ const pentagonSecondInput=getInputValue('pentagon-b');
 //Ellipse
 const ellipseFirstInput=getInputValue('ellipse-a');
 const ellipseSecondInput=getInputValue('ellipse-b');
-console.log(ellipseFirstInput+ellipseSecondInput);
+
+
+//validation check and event handler
+
+//for triangle
+
+
+document.getElementById('btn-triangle').addEventListener('click',function(){
+  const triangleFirstInput=getInputValue('triangle-b');
+  const triangleSecondInput=getInputValue('triangle-h');
+     const triangleArea=0.5 * triangleFirstInput * triangleSecondInput;
+
+     fillResultField('triangle-result',triangleArea);
+
+     makeDisplayBlock('triangle-result-field');
+     
+    
+  
+})
