@@ -56,9 +56,6 @@ function makeDisplayBlock(elementId){
 
 
 
-//Rhombus
-
-
 //Pentagon
 const PentagonFirstInput=getInputValue('pentagon-p');
 const pentagonSecondInput=getInputValue('pentagon-b');
@@ -123,6 +120,21 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
      fillResultField('rhombus-result',rhombusArea);
 
      makeDisplayBlock('rhombus-result-field');
+     
+    
+  
+})
+
+
+//Pentagon
+document.getElementById('btn-pentagon').addEventListener('click',function(){
+  const PentagonFirstInput=getInputValue('pentagon-p');
+  const pentagonSecondInput=getInputValue('pentagon-b');
+     const pentagonArea=0.5 * PentagonFirstInput * pentagonSecondInput ;
+
+     fillResultField('pentagon-result',pentagonArea);
+
+     makeDisplayBlock('pentagon-result-field');
      
     
   
