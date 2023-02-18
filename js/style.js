@@ -56,17 +56,8 @@ function makeDisplayBlock(elementId){
 
 
 
-
-//rectangle
-
-
-//Parallelogram
-const parallelogramFirstInput=getInputValue('parallelogram-b');
-const parallelogramSecondInput=getInputValue('parallelogram-h');
-
 //Rhombus
-const rhombusFirstInput=getInputValue('rhombus-d1');
-const rhombusSecondInput=getInputValue('rhombus-d2');
+
 
 //Pentagon
 const PentagonFirstInput=getInputValue('pentagon-p');
@@ -108,4 +99,34 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     
   
 })
+
+//for Parallelogram
+document.getElementById('btn-parallelogram').addEventListener('click',function(){
+  const parallelogramFirstInput=getInputValue('parallelogram-b');
+  const parallelogramSecondInput=getInputValue('parallelogram-h');
+     const parallelogramArea=parallelogramFirstInput *parallelogramSecondInput ;
+
+     fillResultField('parallelogram-result',parallelogramArea);
+
+     makeDisplayBlock('parallelogram-result-field');
+     
+    
+  
+})
+
+//for Rhombus
+document.getElementById('btn-rhombus').addEventListener('click',function(){
+  const rhombusFirstInput=getInputValue('rhombus-d1');
+  const rhombusSecondInput=getInputValue('rhombus-d2');
+     const rhombusArea=0.5 * rhombusFirstInput *rhombusSecondInput ;
+
+     fillResultField('rhombus-result',rhombusArea);
+
+     makeDisplayBlock('rhombus-result-field');
+     
+    
+  
+})
+
+
 
