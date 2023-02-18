@@ -58,8 +58,7 @@ function makeDisplayBlock(elementId){
 
 
 //rectangle
-const rectangleFirstInput=getInputValue('rectangle-w');
-const rectangleSecondInput=getInputValue('rectangle-l');
+
 
 //Parallelogram
 const parallelogramFirstInput=getInputValue('parallelogram-b');
@@ -95,3 +94,18 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     
   
 })
+
+//for rectangle
+document.getElementById('btn-rectangle').addEventListener('click',function(){
+  const rectangleFirstInput=getInputValue('rectangle-w');
+  const rectangleSecondInput=getInputValue('rectangle-l');
+     const rectangleArea=rectangleFirstInput * rectangleSecondInput;
+
+     fillResultField('rectangle-result',rectangleArea);
+
+     makeDisplayBlock('rectangle-result-field');
+     
+    
+  
+})
+
