@@ -21,10 +21,6 @@ function colors() {
 }
 }
 
-//add new html file bu clicking blog button
-document.getElementById('btn-blog').addEventListener('click',function(){
-  window.location.href='blog.html'
-})
 
 
 //function for take value from the input field
